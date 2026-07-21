@@ -1,7 +1,7 @@
 from __future__ import annotations
 import os, sys
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
-from enterprise_app.core.logger import get_logger, system_diagnostics
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+from src.core.logger import get_logger, system_diagnostics
 
 def main() :
     logger = get_logger("diagnostics", log_dir="./logs", level="DEBUG")

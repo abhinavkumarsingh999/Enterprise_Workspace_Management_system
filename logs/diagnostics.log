@@ -1,0 +1,30 @@
+2026-07-19 11:27:34 | diagnostics | DEBUG | Diagnostics run starting...
+2026-07-19 11:27:34 | diagnostics | INFO | Collecting system information...
+2026-07-19 11:27:34 | diagnostics | INFO | platform: Windows-11-10.0.26200-SP0
+2026-07-19 11:27:34 | diagnostics | INFO | python_version: 3.12.0
+2026-07-19 11:27:34 | diagnostics | INFO | processor: AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD
+2026-07-19 11:27:34 | diagnostics | INFO | cwd: C:\Users\abhinav kumar singh\Downloads\Internship\Enterprise Workspace Scaffolding
+2026-07-19 11:27:34 | diagnostics | WARNING | This is a standard warning tier example.
+2026-07-19 11:27:34 | diagnostics | CRITICAL_WARNING | This is a critical warning tier example.
+2026-07-19 11:27:34 | diagnostics | ERROR | Caught an sample exception during diagnostics.
+Traceback (most recent call last):
+  File "C:\Users\abhinav kumar singh\Downloads\Internship\Enterprise Workspace Scaffolding\scripts\diagnostics.py", line 21, in main
+    x = 1 / 0
+        ~~^~~
+ZeroDivisionError: division by zero
+2026-07-19 11:27:34 | diagnostics | INFO | Diagnostics run complete.
+2026-07-19 12:24:48 | diagnostics | DEBUG | Diagnostics run starting...
+2026-07-19 12:24:48 | diagnostics | INFO | Collecting system information...
+2026-07-19 12:24:48 | diagnostics | INFO | platform: Windows-11-10.0.26200-SP0
+2026-07-19 12:24:48 | diagnostics | INFO | python_version: 3.12.0
+2026-07-19 12:24:48 | diagnostics | INFO | processor: AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD
+2026-07-19 12:24:48 | diagnostics | INFO | cwd: C:\Users\abhinav kumar singh\Downloads\Internship\Enterprise Workspace Scaffolding
+2026-07-19 12:24:48 | diagnostics | WARNING | This is a standard warning tier example.
+2026-07-19 12:24:48 | diagnostics | CRITICAL_WARNING | This is a critical warning tier example.
+2026-07-19 12:24:48 | diagnostics | ERROR | Caught an sample exception during diagnostics.
+Traceback (most recent call last):
+  File "C:\Users\abhinav kumar singh\Downloads\Internship\Enterprise Workspace Scaffolding\scripts\diagnostics.py", line 21, in main
+    x = 1 / 0
+        ~~^~~
+ZeroDivisionError: division by zero
+2026-07-19 12:24:48 | diagnostics | INFO | Diagnostics run complete.
