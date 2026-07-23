@@ -1,4 +1,4 @@
-from scripts.utils.diagnostics import diagnostics
+from scripts.diagnostics import diagnostics
 
 def test_diagnostics_return_type():
     result = diagnostics()
