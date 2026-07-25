@@ -12,7 +12,7 @@ def test_employee_creation() :
         "Abhinav Kumar Singh",
         21,
         "AI Engineer",
-        "Artifical Intelligence"
+        "Artifical Intelligence",
         "Greater Noida",
         80000
     )
@@ -42,7 +42,7 @@ def test_invalid_salary() :
             30,
             "Software Engineer",
             "Web Development",
-            "Delhi"
+            "Delhi",
             -10000
         )
         
@@ -57,14 +57,14 @@ def test_department_add_employee() :
         "Abhinav Kumar Singh",
         21,
         "AI Engineer",
-        "Artificial Intelligence"
+        "Artificial Intelligence",
         "Greater Noida",
         80000
     )
     
-    department.addemployee(employee)
+    department.add_employee(employee)
     
-    assert len(department.empoyees) == 1
+    assert len(department.employees) == 1
     assert department.employees[0].name == "Abhinav"
     
 
@@ -86,7 +86,7 @@ def test_project_assignment():
     )
     
     project.assign_employee(employee)
-    assert len(project.employee) == 1
+    assert len(project.employees) == 1
     
     
 def test_company_structure() :

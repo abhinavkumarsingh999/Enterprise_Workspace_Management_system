@@ -37,6 +37,26 @@ class Employee(BaseEntity):
             raise ValueError("Employee age must ab at least 18.")
         self._age = value
         
+    @property
+    def position(self) :
+        return self._position
+    
+    @position.setter
+    def position(self, value):
+        if not value.strip():
+            raise ValueError("posiiton cannot be empty.")
+        self._position = value
+        
+    @property
+    def department(self):
+        return self._department
+    
+    @department.setter
+    def department(self, value):
+        if not value.strip():
+            raise ValueError("Department cannot be empty.")
+        self._department = value
+        
         
     @property
     def designation(self) :
