@@ -13,8 +13,8 @@ def main() :
     logger.debug("Diagnostics run starting...")
     logger.info("Collecting system information...")
     
-    diagnostics = system_diagnostics()
-    for key in diagnostics:
+    diagnostics_info = system_diagnostics()
+    for key in diagnostics_info:
         value = diagnostics[key]
         logger.info(key + ": " + str(value))
         
@@ -29,4 +29,5 @@ def main() :
         logger.info("Diagnostics run complete.")
         
 
-main()
+if __name__ == "__main__":
+    main()

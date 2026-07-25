@@ -1,6 +1,7 @@
 from src.models.base import BaseEntity
 
 
+
 class Employee(BaseEntity):
     """
     Represents an employee in the company.
@@ -53,9 +54,16 @@ class Employee(BaseEntity):
     
     @department.setter
     def department(self, value):
+        from src.models.department import Department
+        if not isinstance(value, str):
+            raise TypeError("Department must be string.")
+        
         if not value.strip():
             raise ValueError("Department cannot be empty.")
+
         self._department = value
+        
+        
         
         
     @property
@@ -73,7 +81,7 @@ class Employee(BaseEntity):
     @salary.setter
     def salary(self, value) :
         if value <= 0:
-            raise ValueError("salary cannot be negative and zero.")
+            raise ValueError("Salary cannot be negative or zero.")
         self._salary = value
         
     

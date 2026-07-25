@@ -65,7 +65,7 @@ def test_department_add_employee() :
     department.add_employee(employee)
     
     assert len(department.employees) == 1
-    assert department.employees[0].name == "Abhinav"
+    assert department.employees[0].name == "Abhinav Kumar Singh"
     
 
 def test_project_assignment():
@@ -92,14 +92,19 @@ def test_project_assignment():
 def test_company_structure() :
     company = Company("InternQ")
     
-    department = Department(
+    department1 = Department(
        1009,
-       "Enterprise Workspace",
-       2 
+       "Enterprise Workspace" 
     )
     
-    company.add_department(department)
-    company.add_project(project=Project)
+    project = Project(
+        50001,
+        "Enterprise Workspace",
+        2
+    )
+    
+    company.add_department(department1)
+    company.add_project(project=project)
     
     assert len(company.departments) == 1
     assert len(company.projects) == 1

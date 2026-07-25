@@ -34,9 +34,9 @@ class Project(BaseEntity):
             
     def __str__(self) :
         return (
-            f"Project ("
+            f"Project("
             f"{self.title}, "
-            f"Duration = {self.duration} months"
+            f"Duration={self.duration} months"
         )
             
         

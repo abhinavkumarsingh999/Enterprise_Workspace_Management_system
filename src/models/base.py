@@ -19,7 +19,7 @@ class BaseEntity(ABC):
     def entity_id(self, value) :
         if value <=0 :
             raise ValueError("Entity ID must be a positive integer.")
-        self.entity_id = value
+        self._entity_id = value
         
     def __str__(self) :
         return f"{self.__class__.__name__}(ID: {self.entity_id})"

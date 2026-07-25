@@ -41,7 +41,7 @@ def validate_project_title(title: str) :
 
 def validate_duration(duration: str) :
     # Validation project duration
-    if duration < 0 :
+    if duration <= 0 :
         raise ValueError("Duration must be greater than zero.")
     
     return True

@@ -1,4 +1,4 @@
-[Build system]
+[build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
@@ -6,16 +6,17 @@ build-backend = "setuptools.build_meta"
 name = "enterprise-workspace-scaffoling"
 version = "1.0.0"
 description = "Enterprise Workspace Scaffolding for AI/ML Applications"
-author = [
+authors = [
     {name = "Abhinav Kumar Singh" }
 ]
 readme = "README.md"
-requires-pyhton = ">=3.12"
+requires-python = ">=3.12"
 
 [tool.black]
 line-length = 88
 target-version = ["py312"]
 
 [tool.pytest.ini_options]
+pythonpath = ["."]
 testpaths = ["tests"]
-pyhton_files = ["test_*.py"]
+python_files = ["test_*.py"]

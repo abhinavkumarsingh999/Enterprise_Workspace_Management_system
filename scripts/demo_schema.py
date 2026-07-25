@@ -7,12 +7,11 @@ from src.models.department import Department
 def main() :
     # Create a company
     company = Company("InternQ")
-    print(f"Company: {company.name}")
+    print(f"Company: {company}")
 
     # Create departments
-    AI_dept = Department(name="Artificial Intelligence", company=company)
-    web_dept = Department(name="Web Development", company=company)
-    print(f"Departments: {AI_dept.name}, {web_dept.name}")
+    AI_dept = Department(101, "Artificial Intelligence")
+    web_dept = Department(102, "Web Development")
     
     # Add Departments to the company
     company.add_department(AI_dept)
@@ -20,7 +19,7 @@ def main() :
 
     # Create employees
     emp1 = Employee(
-        "101",
+        1001,
         "Abhinav Kumar Singh", 
         21,
         "AI Engineer", 
@@ -30,7 +29,7 @@ def main() :
     )
     
     emp2 = Employee(
-        "102",
+        1002,
         "Akshay Sharma", 
         25,
         "Frontend Developer",
@@ -40,7 +39,7 @@ def main() :
     )
     
     emp3 = Employee(
-        "103",
+        1003,
         "Rohit singhal", 
         27,
         "AI Engineer", 
@@ -50,7 +49,7 @@ def main() :
     )
     
     emp4 = Employee(
-        "104",
+        1004,
         "Rashi Singh", 
         21,
         "Frontend Developer", 
@@ -59,7 +58,6 @@ def main() :
         60000
     )
     
-    print(f"Employees: {emp1.name}, {emp2.name}, {emp3.name}, {emp4.name}")
     
     # Add Employees to their respective departments
     AI_dept.add_employee(emp1)
@@ -69,11 +67,11 @@ def main() :
 
     # Create projects
     proj1 = Project(
+        9001,
         "Enterprise Workspace Scaffolding",
-        AI_dept,
         2
     )
-    print(f"Projects: {proj1.name}")
+    print(f"Projects: {proj1.title}")
     
     # Assign employees to projects
     proj1.assign_employee(emp1)
@@ -84,11 +82,11 @@ def main() :
     
     #Display company structure
     print("\nCompany Structure:")
-    print(f"Company: {company.company_name}")
+    print(f"Company: {company}")
     
     print("\nDepartments:")
     for department in company.departments:
-        print(f"  Department: {department.name}")
+        print(f"  Department: {department.department_name}")
         for employee in department.employees:
             print(
                 f" Employee ID : {employee.entity_id}\n"
@@ -100,11 +98,12 @@ def main() :
         print("\nProjects:")
         
         for proj in company.projects:
-            if proj.department == department:
-                print(f"      - {proj.name}")
-                print("        Assigned Employees:")
-                for assigned_emp in proj.assigned_employees:
-                    print(f"          - {assigned_emp.name} ({assigned_emp.position})")
+            print(f"Project Title : {proj.title}")
+            print(f"Duration      : {proj.duration} Months")
+            print("Assigned Employees:")
+
+        for employee in proj.employees:
+            print(f"  - {employee.name} ({employee.position})")
                     
         print("Data Schema Demonstration Completed Successfully")
     
