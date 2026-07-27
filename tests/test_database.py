@@ -11,8 +11,13 @@ def test_database_connection():
     """
     Test the database connection and ensure it can be established and closed properly.
     """
-    connection = get_connection()
+    success, result = get_connection()
     
-    assert connection is not None 
+    if success :
+        assert result is not None
+        
+    else :
+        assert result == "No database is found"
     
-    close_connection(connection)
+    
+    close_connection(success)

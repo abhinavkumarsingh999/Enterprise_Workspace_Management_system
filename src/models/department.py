@@ -1,5 +1,9 @@
 from src.models.base import BaseEntity
 
+"""
+department ID is of 4 digit.
+"""
+
 class Department(BaseEntity) :
     
     def __init__(self, department_id, department_name) : #id-> 1001

@@ -5,14 +5,23 @@ from src.models.department import Department
 from src.models.project import Project
 from src.models.company import Company
 
+AI_department = Department(
+    1001,
+    "Artificial Intelligence"
+)
 
+Web_department = Department(
+    1002,
+    "Web Development"
+)    
+    
 def test_employee_creation() :
     employee = Employee(
-        101,
+        500001,
         "Abhinav Kumar Singh",
         21,
         "AI Engineer",
-        "Artifical Intelligence",
+        AI_department,
         "Greater Noida",
         80000
     )
@@ -25,11 +34,11 @@ def test_employee_creation() :
 def test_invalid_age() :
     with pytest.raises(ValueError) :
         Employee(
-            105,
-            "Rahul Kumar",
+            500002,
+            "Rahul",
             17,
             "Developer",
-            "Web Development",
+            Web_department,
             "Noida",
             50000
         )
@@ -37,27 +46,27 @@ def test_invalid_age() :
 def test_invalid_salary() :
     with pytest.raises(ValueError) :
         Employee(
-            104,
+            500004,
             "Amit Singhal",
             30,
             "Software Engineer",
-            "Web Development",
+            Web_department,
             "Delhi",
             -10000
         )
         
 def test_department_add_employee() :
     department = Department(
-        1009,
+        1001,
         "Artificial Intelligence"
     )
     
     employee = Employee(
-        101,
+        500001,
         "Abhinav Kumar Singh",
         21,
         "AI Engineer",
-        "Artificial Intelligence",
+        AI_department,
         "Greater Noida",
         80000
     )
@@ -70,17 +79,17 @@ def test_department_add_employee() :
 
 def test_project_assignment():
     project = Project(
-        50001,
+        2000001,
         "Enterprise Workspace",
         2
     )
     
     employee = Employee(
-        101,
+        500001,
         "Abhinav Kumar Singh",
         21,
         "AI Engineer",
-        "Artificial Intelligence",
+        AI_department,
         "Greater Noida",
         80000
     )
@@ -90,15 +99,18 @@ def test_project_assignment():
     
     
 def test_company_structure() :
-    company = Company("InternQ")
+    company = Company(
+        10001,
+        "InternQ"
+        )
     
     department1 = Department(
-       1009,
+       1003,
        "Enterprise Workspace" 
     )
     
     project = Project(
-        50001,
+        2000001,
         "Enterprise Workspace",
         2
     )

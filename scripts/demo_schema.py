@@ -10,8 +10,8 @@ def main() :
     print(f"Company: {company}")
 
     # Create departments
-    AI_dept = Department(101, "Artificial Intelligence")
-    web_dept = Department(102, "Web Development")
+    AI_dept = Department(1001, "Artificial Intelligence")
+    web_dept = Department(1002, "Web Development")
     
     # Add Departments to the company
     company.add_department(AI_dept)
@@ -19,7 +19,7 @@ def main() :
 
     # Create employees
     emp1 = Employee(
-        1001,
+        500001,
         "Abhinav Kumar Singh", 
         21,
         "AI Engineer", 
@@ -29,7 +29,7 @@ def main() :
     )
     
     emp2 = Employee(
-        1002,
+        500002,
         "Akshay Sharma", 
         25,
         "Frontend Developer",
@@ -39,7 +39,7 @@ def main() :
     )
     
     emp3 = Employee(
-        1003,
+        500003,
         "Rohit singhal", 
         27,
         "AI Engineer", 
@@ -49,7 +49,7 @@ def main() :
     )
     
     emp4 = Employee(
-        1004,
+        500004,
         "Rashi Singh", 
         21,
         "Frontend Developer", 
@@ -67,7 +67,7 @@ def main() :
 
     # Create projects
     proj1 = Project(
-        9001,
+        2000001,
         "Enterprise Workspace Scaffolding",
         2
     )

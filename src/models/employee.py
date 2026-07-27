@@ -1,6 +1,9 @@
 from src.models.base import BaseEntity
+from src.models.department import Department
 
-
+"""
+employee id is of 6 digit.
+"""
 
 class Employee(BaseEntity):
     """
@@ -54,24 +57,20 @@ class Employee(BaseEntity):
     
     @department.setter
     def department(self, value):
-        from src.models.department import Department
-        if not isinstance(value, str):
-            raise TypeError("Department must be string.")
-        
-        if not value.strip():
-            raise ValueError("Department cannot be empty.")
+        if not isinstance(value, Department):
+            raise TypeError("Department must be a object.")
 
         self._department = value
         
-        
-        
-        
+     
     @property
     def designation(self) :
         return self._designation
     
     @designation.setter
     def designation(self, value) :
+        if not value.strip():
+            raise ValueError("Designation cannot be empty.")
         self._designation = value
         
     @property
@@ -81,13 +80,15 @@ class Employee(BaseEntity):
     @salary.setter
     def salary(self, value) :
         if value <= 0:
-            raise ValueError("Salary cannot be negative or zero.")
+            raise ValueError("Salary cannot be greater than zero.")
         self._salary = value
         
     
     def __str__(self) :
         return (
-            f"Employee(ID = {self.entity_id})"  # from base.py
-            f"Name = {self.name}"
-            f"Designation = {self.designation})"
+            f"Employee(ID = {self.entity_id},"  # from base.py
+            f"Name = '{self.name}',"
+            f"Department='{self.department.department_name}', "
+            f"Designation='{self.designation}', "
+            f"Salary={self.salary})"
         ) 

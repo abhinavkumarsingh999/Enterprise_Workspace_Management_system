@@ -1,5 +1,9 @@
 from src.models.base import BaseEntity
 
+"""
+project ID is of 7 digit.
+"""
+
 class Project(BaseEntity):
     def __init__(self, project_id, title, duration) :
         super().__init__(project_id) # project id -> 50001
