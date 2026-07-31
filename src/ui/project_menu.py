@@ -154,11 +154,13 @@ def project_menu():
                 #DISPLAY ALL PROJECTS
 
                 projects = controller.get_all_projects()
-
-                print()
-
-                for project in projects:
-                    print(project)
+                
+                if not projects :
+                    print("\nNo projects found.")
+                    
+                else :
+                    for project in projects:
+                        print(project)
 
             elif choice == "11":
                 #BACK
