@@ -1,5 +1,8 @@
 from src.models.base import BaseEntity
 
+'''
+Company id is of 5 digit.
+'''
 
 class Company(BaseEntity) :
     def __init__(self, company_id,company_name) :

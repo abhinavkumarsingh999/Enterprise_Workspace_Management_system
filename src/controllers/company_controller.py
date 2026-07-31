@@ -238,7 +238,7 @@ class CompanyController:
             )
         
             
-    def company_summary(self):
+    def company_report(self):
         print("COMPANY SUMMARY")
 
         print(f"Company Name : {self.company.company_name}")
